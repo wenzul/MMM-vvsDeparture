@@ -74,7 +74,7 @@ The following properties can be configured:
 			    <code>directions</code>
 			</td>
             <td>Filter departures for directions.
-      			<br><br><b>Possible values:</b> <code>list</code>
+      			<br><br><b>Possible values:</b> <code>array</code>
 				<br><b>Default value:</b> <code>[]</code>
 			</td>
 		</tr>
