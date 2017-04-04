@@ -8,6 +8,7 @@ Module.register("MMM-vvsDeparture",{
     defaults:{
         station_id: 5002201,
         station_name: 'Libanonstraße',
+        directions: [],
         maximumEntries: 6,
         reloadInterval:  1 * 60 * 1000, // every minute
     },
@@ -34,7 +35,11 @@ Module.register("MMM-vvsDeparture",{
     // Override socket notification handler.
     socketNotificationReceived: function(notification, payload) {
         if (notification === "NEW_DEPARTURE") {
-            this.departure = payload;
+            if(this.config.directions.length > 0){
+                this.departure = payload.filter(function(val){return this.config.directions.indexOf(val.direction) >= 0;}, this);
+            }else {
+                this.departure = payload;
+            }
             this.updateDom();
         }
     },
