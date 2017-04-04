@@ -1,14 +1,12 @@
 # MMM-vvsDeparture
 A MagicMirror2 Module for public transport in Stuttgart, Germany
 
-[![Build Status](https://travis-ci.org/barnabycolby/MMM-Carousel.svg?branch=master)](https://travis-ci.org/barnabycolby/MMM-Carousel)
-
 ## Installation
 Run these commands at the root of your magic mirror install.
 
 ```shell
 cd modules
-git clone https://github.com/niklaskappler/MMM-vvsDeparture
+git clone https://github.com/wenzul/MMM-vvsDeparture
 ```
 
 ## Using the module
@@ -69,6 +67,15 @@ The following properties can be configured:
       <td> The refresh rate dparture entries will be updated in milliseconds. 
       				<br><br><b>Possible values:</b> <code>integer</code>
 				<br><b>Default value:</b> <code>1 * 60 * 1000</code> e.q. one minute
+			</td>
+		</tr>
+		<tr>
+			<td>
+			    <code>directions</code>
+			</td>
+            <td>Filter departures for directions.
+      			<br><br><b>Possible values:</b> <code>list</code>
+				<br><b>Default value:</b> <code>[]</code>
 			</td>
 		</tr>
 	</tbody>
